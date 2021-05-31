@@ -4,7 +4,41 @@
     <projectFile>HotelListing/HotelListing.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b5baa81e-9d46-4560-aefe-9b36b51669a3" name="Default Changelist" comment="" />
+    <list default="true" id="b5baa81e-9d46-4560-aefe-9b36b51669a3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/HotelListing/Data/Country.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelListing/Data/DatabaseContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelListing/Data/Hotel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelListing/IRepository/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelListing/IRepository/IUnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelListing/Repository/GenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HotelListing/Repository/UnitOfWork.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotelListing/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotelListing/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/HotelListing/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HotelListing/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/HotelListing/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/HotelListing/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/HotelListing.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/HotelListing.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/HotelListing.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/HotelListing.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/HotelListing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/HotelListing.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/HotelListing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/HotelListing.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/ref/HotelListing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/bin/Debug/net5.0/ref/HotelListing.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/HotelListing.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/ref/HotelListing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/Debug/net5.0/ref/HotelListing.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/HotelListing.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/HotelListing.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/HotelListing.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/HotelListing.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HotelListing/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/HotelListing/obj/rider.project.restore.info" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,17 +59,28 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/HotelListing/Program.cs" />
       <option value="$PROJECT_DIR$/HotelListing/Controllers/WeatherForecastController.cs" />
-      <option value="$PROJECT_DIR$/HotelListing/Startup.cs" />
       <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.gitignore" />
+      <option value="$PROJECT_DIR$/HotelListing/appsettings.json" />
+      <option value="$PROJECT_DIR$/HotelListing/Startup.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/Data/DatabaseContext.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/Data/Country.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/Data/Hotel.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/IRepository/IGenericRepository.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/IRepository/IUnitOfWork.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/Repository/UnitOfWork.cs" />
+      <option value="$PROJECT_DIR$/HotelListing/Repository/GenericRepository.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tF2AmGY1kzLPQ5qv0DnORJRyHH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver" />
     <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994337" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -43,7 +88,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="GitIgnore" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="RiderIisExpressOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.HotelListing">
@@ -86,12 +131,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1622350391918</updated>
-      <workItem from="1622350526533" duration="4877000" />
+      <workItem from="1622350526533" duration="5513000" />
+      <workItem from="1622357964896" duration="2689000" />
+      <workItem from="1622368083818" duration="5038000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
