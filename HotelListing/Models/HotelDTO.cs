@@ -23,10 +23,10 @@ namespace HotelListing.Models
         public int CountryId { get; set; }
     }
 
-    public class HotelDTO : CreateCountryDTO
+    public class HotelDTO : CreateHotelDTO
     {
         public int Id { get; set; }
         //DTO should not access directly to the domain object only mapping should be the bridge between dto and domain models
-        public CountryDTO CountryDto { get; set; }
+        public CountryDTO Country { get; set; }
     }
 }

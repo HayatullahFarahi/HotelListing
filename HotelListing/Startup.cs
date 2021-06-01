@@ -13,6 +13,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using HotelListing.Configurations;
 using HotelListing.Data;
+using HotelListing.IRepository;
+using HotelListing.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing
@@ -43,13 +45,23 @@ namespace HotelListing
             
             //adding the auto mapper initializer class
             services.AddAutoMapper(typeof(MapperInitializer));
+            //TODO: registering IUnitOfWork service 
+            //AddScoped , AddTransient, AddSingleton
+                // AddTransient: everytime it is need a new instance will be created 
+                // AddScoped: a single instance is created for a lifetime of a certain request
+                // AddSingleton: a single instance is created for the entire duration of the application
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotelListing", Version = "v1" });
             });
             
-            services.AddControllers();
+            //TODO: AddNewtonsoftJson to ignore the loop between country and the hotel models 
+            services.AddControllers().AddNewtonsoftJson(op =>
+                op.SerializerSettings.ReferenceLoopHandling = 
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +86,11 @@ namespace HotelListing
 
             app.UseEndpoints(endpoints =>
             {
+                // TODO: defining convention based routing for MVC Web App
+                // endpoints.MapControllerRoute(
+                //     name: "default",
+                //     pattern: "{controller=Home}/{action=Index}/{id}"
+                // );
                 endpoints.MapControllers();
             });
         }
