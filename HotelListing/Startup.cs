@@ -15,6 +15,7 @@ using HotelListing.Configurations;
 using HotelListing.Data;
 using HotelListing.IRepository;
 using HotelListing.Repository;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace HotelListing
@@ -35,6 +36,12 @@ namespace HotelListing
                 options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"))
             );
 
+            // TODO: AUTH
+            //Referencing ServiceExtensions file for identityUser service
+            //ConfigureIdentity method of service extension
+            services.AddAuthentication();
+            services.ConfigureIdentity();
+            
             services.AddCors(options => {
                 options.AddPolicy("AllowAll", builder => 
                         builder.AllowAnyOrigin()
