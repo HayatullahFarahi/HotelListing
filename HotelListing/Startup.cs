@@ -15,6 +15,7 @@ using HotelListing.Configurations;
 using HotelListing.Data;
 using HotelListing.IRepository;
 using HotelListing.Repository;
+using HotelListing.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -41,6 +42,7 @@ namespace HotelListing
             //ConfigureIdentity method of service extension
             services.AddAuthentication();
             services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
             
             services.AddCors(options => {
                 options.AddPolicy("AllowAll", builder => 
@@ -58,6 +60,8 @@ namespace HotelListing
                 // AddScoped: a single instance is created for a lifetime of a certain request
                 // AddSingleton: a single instance is created for the entire duration of the application
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            //TODO: AUTH
+            services.AddScoped<IAuthManager, AuthManager>();
             
             services.AddSwaggerGen(c =>
             {
@@ -89,6 +93,7 @@ namespace HotelListing
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
