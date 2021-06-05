@@ -29,4 +29,9 @@ namespace HotelListing.Models
         //DTO should not access directly to the domain object only mapping should be the bridge between dto and domain models
         public CountryDTO Country { get; set; }
     }
+
+    public class UpdateHotelDTO : CreateHotelDTO
+    {
+        
+    }
 }

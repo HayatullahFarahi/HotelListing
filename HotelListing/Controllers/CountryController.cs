@@ -90,5 +90,98 @@ namespace HotelListing.Controllers
             });
          }
       }
+      
+      [Authorize]
+      [HttpPut("{id:int}")]
+      public async Task<IActionResult> UpdateCountry(int id, [FromBody] UpdateCountryDTO countryDTO)
+      {
+         if (!ModelState.IsValid || id < 1)
+         {
+            return BadRequest(ModelState);
+         }
+
+         try
+         {
+            var country = await _unitOfWork.Countries.Get(q => q.Id == id);
+            if (country == null)
+            {
+               return NotFound(new
+               {
+                  title = "Not Found",
+                  message = "The submitted country was not found!"
+               });
+            }
+
+            _mapper.Map(countryDTO, country);
+            _unitOfWork.Countries.Update(country);
+            await _unitOfWork.Save();
+
+            return Ok(new ResponseModel
+            {
+               Title = "Updated",
+               Message = "The record was updated successfully!"
+            });
+         }
+         catch (Exception e)
+         {
+            _logger.LogError(e, $"Something went wrong in the {nameof(UpdateCountry)}");
+            return StatusCode(500, new
+            {
+               cusomeMessage = "Internal server error. Please try again later",
+               message = e.Message
+            });
+         }
+      }
+      
+      [Authorize( Roles = "Admin")]
+      [HttpDelete("{id:int}")]
+      public async Task<IActionResult> DeleteCountry(int id)
+      {
+         if (id < 1)
+         {
+            _logger.LogError($"Invalid DELETE attempt in {nameof(DeleteCountry)}");
+            return BadRequest(new ResponseModel
+            {
+               Title = "Not Found",
+               Message = "Country not found!"
+            });
+         }
+
+         try
+         {
+            var country = await _unitOfWork.Countries.Get(q => q.Id == id);
+            if (country == null)
+            {
+               _logger.LogError($"Invalid DELETE attempt in {nameof(DeleteCountry)}");
+               return BadRequest(new ResponseModel
+               {
+                  Title = "Not Found",
+                  Message = "Hotel not found!"
+               });
+            }
+
+            await _unitOfWork.Countries.Delete(id);
+            await _unitOfWork.Save();
+
+            return Ok(new ResponseModel
+            {
+               Title = "Deleted",
+               Message = "The record was deleted successfully!"
+            });
+
+         }
+         catch (Exception e)
+         {
+            _logger.LogError(e, $"Something went wrong in the {nameof(DeleteCountry)}");
+            return StatusCode(500, new
+            {
+               cusomeMessage = "Internal server error. Please try again later",
+               message = e.Message
+            });
+         }
+
+         
+      }
+      
    }
 }
