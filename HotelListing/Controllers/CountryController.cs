@@ -27,40 +27,24 @@ namespace HotelListing.Controllers
          _mapper = mapper;
       }
 
+      //TODO: with pagination
       [HttpGet]
-      [ProducesResponseType(StatusCodes.Status200OK)]
-      [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-      public async Task<IActionResult> GetCountries()
+      public async Task<IActionResult> GetCountries([FromQuery] RequestParams requestParams)
       {
-         try
-         {
-            var countries = await _unitOfWork.Countries.GetAll();
-            var results = _mapper.Map<IList<CountryDTO>>(countries);
-            return Ok(results);
-         }
-         catch (Exception ex)
-         {
-            _logger.LogError(ex, $"Something went wrong is the {nameof(GetCountries)}");
-            return StatusCode(500, "Internal Server Error. Please try again later");
-         }
+         var countries = await _unitOfWork.Countries.GetAllWithPagination(requestParams);
+         var results = _mapper.Map<IList<CountryDTO>>(countries);
+         return Ok(results);
       }
       [HttpGet("{id:int}", Name = "GetCountry")]
       [ProducesResponseType(StatusCodes.Status200OK)]
       [ProducesResponseType(StatusCodes.Status500InternalServerError)]
       public async Task<IActionResult> GetCountry(int id)
       {
-         try
-         {
-            var country = await _unitOfWork.Countries.Get(q => q.Id == id,
+         var country = await _unitOfWork.Countries.Get(q => q.Id == id,
                new List<string>{ "Hotels" });
-            var result = _mapper.Map<CountryDTO>(country);
-            return Ok(result);
-         }
-         catch (Exception ex)
-         {
-            _logger.LogError(ex, $"Something went wrong is the {nameof(GetCountry)}");
-            return StatusCode(500, ex.Message);
-         }
+         var result = _mapper.Map<CountryDTO>(country);
+         return Ok(result);
+         
       }
       
       [Authorize( Roles = "Admin")]
@@ -72,23 +56,10 @@ namespace HotelListing.Controllers
             _logger.LogError($"Invalid POST attempt in {nameof(CreateCountry)}");
             return BadRequest(ModelState);
          }
-
-         try
-         {
-            var country = _mapper.Map<Country>(countryDTO);
-            await _unitOfWork.Countries.Insert(country);
-            await _unitOfWork.Save();
-            return CreatedAtRoute("GetCountry", new { id = country.Id}, country);
-         }
-         catch (Exception e)
-         {
-            _logger.LogError(e, $"Something went wrong in the {nameof(CreateCountry)}");
-            return StatusCode(500, new
-            {
-               cusomeMessage = "Internal server error. Please try again later",
-               message = e.Message
-            });
-         }
+         var country = _mapper.Map<Country>(countryDTO);
+         await _unitOfWork.Countries.Insert(country);
+         await _unitOfWork.Save();
+         return CreatedAtRoute("GetCountry", new { id = country.Id}, country);
       }
       
       [Authorize]
@@ -99,38 +70,25 @@ namespace HotelListing.Controllers
          {
             return BadRequest(ModelState);
          }
-
-         try
+         var country = await _unitOfWork.Countries.Get(q => q.Id == id);
+         if (country == null)
          {
-            var country = await _unitOfWork.Countries.Get(q => q.Id == id);
-            if (country == null)
+            return NotFound(new
             {
-               return NotFound(new
-               {
-                  title = "Not Found",
-                  message = "The submitted country was not found!"
-               });
-            }
-
-            _mapper.Map(countryDTO, country);
-            _unitOfWork.Countries.Update(country);
-            await _unitOfWork.Save();
-
-            return Ok(new ResponseModel
-            {
-               Title = "Updated",
-               Message = "The record was updated successfully!"
+               title = "Not Found",
+               message = "The submitted country was not found!"
             });
          }
-         catch (Exception e)
+
+         _mapper.Map(countryDTO, country);
+         _unitOfWork.Countries.Update(country);
+         await _unitOfWork.Save();
+
+         return Ok(new ResponseModel
          {
-            _logger.LogError(e, $"Something went wrong in the {nameof(UpdateCountry)}");
-            return StatusCode(500, new
-            {
-               cusomeMessage = "Internal server error. Please try again later",
-               message = e.Message
-            });
-         }
+            Title = "Updated",
+            Message = "The record was updated successfully!"
+         });
       }
       
       [Authorize( Roles = "Admin")]
@@ -146,40 +104,23 @@ namespace HotelListing.Controllers
                Message = "Country not found!"
             });
          }
-
-         try
+         var country = await _unitOfWork.Countries.Get(q => q.Id == id);
+         if (country == null)
          {
-            var country = await _unitOfWork.Countries.Get(q => q.Id == id);
-            if (country == null)
+            _logger.LogError($"Invalid DELETE attempt in {nameof(DeleteCountry)}");
+            return BadRequest(new ResponseModel
             {
-               _logger.LogError($"Invalid DELETE attempt in {nameof(DeleteCountry)}");
-               return BadRequest(new ResponseModel
-               {
-                  Title = "Not Found",
-                  Message = "Hotel not found!"
-               });
+               Title = "Not Found", 
+               Message = "Hotel not found!"
+            });
             }
-
-            await _unitOfWork.Countries.Delete(id);
-            await _unitOfWork.Save();
-
-            return Ok(new ResponseModel
-            {
-               Title = "Deleted",
-               Message = "The record was deleted successfully!"
-            });
-
-         }
-         catch (Exception e)
+         await _unitOfWork.Countries.Delete(id);
+         await _unitOfWork.Save();
+         return Ok(new ResponseModel 
          {
-            _logger.LogError(e, $"Something went wrong in the {nameof(DeleteCountry)}");
-            return StatusCode(500, new
-            {
-               cusomeMessage = "Internal server error. Please try again later",
-               message = e.Message
-            });
-         }
-
+            Title = "Deleted",
+            Message = "The record was deleted successfully!"
+         });
          
       }
       

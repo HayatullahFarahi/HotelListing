@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ieVJhm/N4eWEqFio7gbgIVjnLvB/4tpe/++iCZDKjnldlMc5gpPU37bE+nj4IL27jxGc6hPSCZoOj6Zk7yZi4A==",
+  "dgSpecHash": "fGKM43fADhyQfCJcVBD8jiupW4qYiCPgbmGMBrRZ0bq+WjcK6hfzwwp8fVIIGEQ2b66AwI5Lh00gL7WQHlZRLQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Hayatullah Farahi\\source\\repos\\HotelListing\\HotelListing\\HotelListing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\jwt\\8.2.2\\jwt.8.2.2.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.6\\microsoft.aspnetcore.authentication.jwtbearer.5.0.6.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0-preview.4.21253.5\\microsoft.aspnetcore.cryptography.internal.6.0.0-preview.4.21253.5.nupkg.sha512",
@@ -136,7 +137,9 @@
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\system.threading.timer\\4.0.1\\system.threading.timer.4.0.1.nupkg.sha512",
-    "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
+    "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\x.pagedlist\\8.1.0\\x.pagedlist.8.1.0.nupkg.sha512",
+    "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\x.pagedlist.mvc.core\\8.1.0\\x.pagedlist.mvc.core.8.1.0.nupkg.sha512"
   ],
   "logs": []
 }

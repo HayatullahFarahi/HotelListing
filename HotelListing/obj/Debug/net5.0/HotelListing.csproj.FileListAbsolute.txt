@@ -89,3 +89,6 @@ C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5
 C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\obj\Debug\net5.0\HotelListing.csproj.AssemblyReference.cache
 C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\JWT.dll
+C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\JetBrains.Annotations.dll
+C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.dll
+C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
