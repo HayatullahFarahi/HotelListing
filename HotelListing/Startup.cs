@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using HotelListing.Configurations;
 using HotelListing.Data;
 using HotelListing.IRepository;
+using HotelListing.Middleware;
 using HotelListing.Repository;
 using HotelListing.Services;
 using Microsoft.AspNetCore.Identity;
@@ -94,6 +95,8 @@ namespace HotelListing
             app.UseRouting();
 
             app.UseAuthentication();
+            //TODO: this middleware checks for expiration token and returns custom status and response
+            app.UseMiddleware<ExpiredTokenMiddleware>();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
