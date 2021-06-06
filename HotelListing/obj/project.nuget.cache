@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fGKM43fADhyQfCJcVBD8jiupW4qYiCPgbmGMBrRZ0bq+WjcK6hfzwwp8fVIIGEQ2b66AwI5Lh00gL7WQHlZRLQ==",
+  "dgSpecHash": "HcunsJGTh9FXtKt6hxvOrB+/ySM83XK5VQFxqhEC9zO8y8hMyMYMTZ6nXDc4oZqv7J04fel5x67OtHShGYFmsg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Hayatullah Farahi\\source\\repos\\HotelListing\\HotelListing\\HotelListing.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.0-preview.4.21253.5\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.0-preview.4.21253.5.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.1\\microsoft.aspnetcore.jsonpatch.5.0.1.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.1\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.1.nupkg.sha512",
+    "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\5.0.0\\microsoft.aspnetcore.mvc.versioning.5.0.0.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.2\\microsoft.data.sqlclient.2.1.2.nupkg.sha512",
     "C:\\Users\\Hayatullah Farahi\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

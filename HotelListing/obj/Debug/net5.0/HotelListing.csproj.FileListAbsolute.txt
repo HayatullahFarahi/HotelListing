@@ -92,3 +92,4 @@ C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5
 C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\JetBrains.Annotations.dll
 C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.dll
 C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\X.PagedList.Mvc.Core.dll
+C:\Users\Hayatullah Farahi\source\repos\HotelListing\HotelListing\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
